@@ -50,12 +50,10 @@ export default function Home({ postsPagination }: HomeProps) {
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   async function HandleSearchNextPage(): Promise<void> {
     if (nextPage) {
-      console.log('entrou aqui');
       await fetch(nextPage)
         .then(response => response.json())
         .then((data: PostPagination) => {
           if (data.next_page) {
-            console.log('entrou aqui2');
             setNextPage(data.next_page);
           } else {
             setNextPage('');
@@ -66,8 +64,6 @@ export default function Home({ postsPagination }: HomeProps) {
             if (newPage) {
               setNewPage([...newPage, result]);
             } else {
-              console.log('entrou aqui3');
-              console.log(result);
               setNewPage([result]);
             }
           });
@@ -108,7 +104,15 @@ export default function Home({ postsPagination }: HomeProps) {
                     <p>{page.data.subtitle}</p>
                     <section>
                       <FiCalendar className={styles.calendarIcon} />
-                      <time>{page.first_publication_date}</time>
+                      <time>
+                        {new Date(
+                          page.first_publication_date
+                        ).toLocaleDateString('pt-BR', {
+                          day: '2-digit',
+                          month: 'short',
+                          year: 'numeric',
+                        })}
+                      </time>
                       <IoPersonOutline className={styles.personIcon} />
                       <span>{page.data.author}</span>
                     </section>
