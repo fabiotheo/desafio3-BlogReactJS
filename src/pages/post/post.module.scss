@@ -1,1 +1,83 @@
-// TODO
+.imgBackground {
+  border: 0;
+  height: 100%;
+  width: 100%;
+  margin-top: 4rem;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.contentContainer {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 8rem;
+}
+
+.apresentation {
+  max-width: 720px;
+  margin: 5rem 1rem 2rem 0rem;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    display: block;
+    font-size: 3rem;
+    line-height: 2.125rem;
+    color: var(--white);
+  }
+
+  .details {
+    height: 3rem;
+    margin-top: 2rem;
+    position: absolute;
+    display: flex;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    svg.calendarIcon {
+      margin-right: 0.5rem;
+    }
+
+    svg.personIcon {
+      margin-left: 2rem;
+      margin-right: 0.5rem;
+    }
+
+    time {
+      color: var(--grey-200);
+      font-size: 0.875rem;
+    }
+
+    span {
+      color: var(--grey-200);
+      font-size: 0.875rem;
+    }
+
+    p {
+      display: block;
+      position: absolute;
+      margin-top: 2.5rem;
+      font-size: 0.875rem;
+      font-style: italic;
+    }
+  }
+}
+
+.content {
+  margin-top: 10rem;
+
+  h2 {
+    display: block;
+    font-size: 2.25rem;
+  }
+
+  p{
+    display: block;
+    margin: 3rem 0 5rem 0;
+    font-size: 1.125rem;
+    color: var(--grey-200);
+  }
+}

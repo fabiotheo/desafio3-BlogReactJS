@@ -1,1 +1,85 @@
-// TODO
+.contentContainer {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 8rem;
+}
+
+.posts {
+  max-width: 720px;
+  margin: 5rem 1rem 2rem 0rem;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    display: block;
+
+    & + a {
+      margin-top: 5rem;
+      padding-top: 1.5rem;
+    }
+
+    h1 {
+      display: block;
+      font-size: 1.5rem;
+      line-height: 2.125rem;
+      color: var(--white);
+    }
+
+    p {
+      margin-top: 0.5rem;
+      color: var(--grey-200);
+      font-size: 1.125rem;
+    }
+
+    section {
+      height: 3rem;
+      margin-top: 1.125rem;
+      position: absolute;
+      display: flex;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      svg.calendarIcon {
+        margin-right: 0.5rem;
+      }
+
+      svg.personIcon {
+        margin-left: 3rem;
+        margin-right: 0.5rem;
+      }
+
+      time {
+        color: var(--grey-200);
+        font-size: 0.875rem;
+      }
+
+      span {
+        color: var(--grey-200);
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+.buttonLoadPosts {
+  margin-top: 6rem;
+  color: var(--purple);
+  background: var(--black);
+  border: 0;
+  font-weight: bold;
+
+  padding: 1rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--purple2);
+  }
+}
